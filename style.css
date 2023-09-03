@@ -1,0 +1,183 @@
+@font-face {
+    font-family: myfont;
+    src: url(./assets/fonts/Poppins-Bold.ttf);
+    src: url(./assets/fonts/Poppins-BoldItalic.ttf);
+    src: url(./assets/fonts/Poppins-ExtraBold.ttf);
+    src: url(./assets/fonts/Poppins-ExtraBoldItalic.ttf);
+    src: url(./assets/fonts/Poppins-Italic.ttf);
+    src: url(./assets/fonts/Poppins-Regular.ttf);
+}
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: myfont;
+    transform: all 0.5s;
+}
+
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Off-white);
+    
+}
+
+main {
+    padding: 1.5rem 2rem;
+    background-color: var(--White);
+    width: 40%;
+    border-radius: 1rem;
+    border-bottom-right-radius: 7rem;
+}
+
+.inputheads {
+    position: relative;
+    /* width:90%; */
+    color: var(--Smokey-grey);
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+
+    font-size: 0.5rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    /* height: 5rem; */
+    gap: 0;
+    gap: 1rem;
+}
+
+.dateinput {
+    width: 70%;
+    display: flex;
+
+}
+
+label {
+    width: 30%;
+}
+
+hr {
+    width: 80%;
+    bottom: -1rem;
+    /* position: absolute; */
+}
+
+.flexcol {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+}
+
+input {
+    height: 2rem;
+    width: 50%;
+    border: 1px solid var(--Light-grey);
+    border-radius: 0.2rem;
+    padding: 0.3rem 0.8rem;
+    font-weight: bolder;
+    font-size: 0.8rem;
+    outline:none;
+}
+input:hover,input:focus,img:hover{
+    border: 1px solid hsl(259, 100%, 65%);;
+    cursor: pointer;
+}
+img:hover{
+    background-color: black;
+}
+::placeholder {
+    font-weight: bolder;
+}
+
+.upp2 {
+    position: relative;
+}
+
+img {
+    background-color: hsl(259, 100%, 65%);
+    /* height: 108%; */
+    width: 2rem;
+    padding: 9px;
+    border-radius: 50%;
+    position: absolute;
+    top: -1.5rem;
+    left: 80%;
+}
+.dateinput span{
+   
+    font-size: 0.5rem;
+    text-transform: capitalize;
+    color:red;
+}
+.errrorcolor{
+    color:red;
+}
+.hide{
+    display: none;
+}
+.errorinput{
+    border:1px solid red;
+}
+.result {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1.2;
+    font-style: italic;
+}
+
+.col span {
+    color: hsl(259, 100%, 65%)
+}
+
+@media (max-width:860px) {
+    main {
+        width: 70%
+    }
+
+    .result {
+        font-size: 2.5rem;
+        margin: 1.2rem 0;
+    }
+
+    .upp2 {
+        width: 90%;
+        margin: 2rem 0;
+    }
+
+    input {
+        padding: 8px 10px;
+        width: 60%;
+    }
+
+    .dateinput {
+        width: 100%;
+        gap: 1rem;
+    }
+
+    hr {
+        width: 100%;
+    }
+
+    img {
+        left: 40%
+    }
+}
+
+@media (max-width:300px) {
+    .result {
+        font-size: 2rem;
+    }
+}
